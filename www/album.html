@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Yeezify</title>
+        <link rel="stylesheet" type="text/css" href="CSS/main.css">
+        <link rel="stylesheet" type="text/css" href="CSS/album.css">
+    </head>
+    <body onload="initAlbum()">
+        <div class="album-display">
+            <img src="Images/PlaceHolder.png" id="main-album-cover">
+            <p class="title" id="main-album-title">Title</p>
+            <div class="player-header">
+                <audio id="audio-player">
+                </audio>
+
+                <button class="last-song-button" onclick="lastSong()">
+                    <img src="Images/Buttons/Last_Song.png">   
+                </button>
+                <button class="pause-play-button" onclick="pausePlay()">
+                    <img src="Images/Buttons/Play.png" id="pause-play-img">   
+                </button>
+                <button class="next-song-button" onclick="nextSong()">
+                    <img src="Images/Buttons/Next_Song.png">   
+                </button>
+                <br>
+                <p id="player-time-display">00:00 - 00:00</p>
+            </div>
+            <div class="album-songs-header" id="album-song-header">
+                
+            </div>
+        </div>
+        <div class="song-info-box">
+            <img src="Images/PlaceHolder.png" id="playing-image">
+            <p class="title" id="playing-title">No song playing</p>
+            <p class="artist" id="playing-artist"></p>
+            <p class="album" id="playing-album"></p>
+        </div>
+    </body>
+    <script src="JS/jsmediatags.min.js"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/songindex.js"></script>
+    <script src="JS/player.js"></script>
+    <script src="JS/album.js"></script>
+</html>

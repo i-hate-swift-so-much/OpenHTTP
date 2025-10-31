@@ -1,0 +1,55 @@
+.album-display{
+    width: calc(70vw - 30px);
+    height: calc(98vh - 30px);
+    margin: 1vh;
+    background-color: var(--col-l2);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.album-display>img{
+    width: 15vw;
+    height: 15vw;
+    box-shadow: 0.5vw 0.5vw 0px black;
+    border-radius: 20px;
+    box-shadow: 0.5vw 0.5vw 0px black;
+}
+
+.album-display>p{
+    color: white;
+    font-size: 36pt;
+    font-family: sans-serif;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    position: fixed;
+    left: 17vw;
+    top: -2vh;
+}
+
+.album-display>.album{
+    top: 36pt;
+}
+
+br {
+  content: '\A';
+  display: contents;
+  white-space: pre;
+}
+
+.album-songs-header{
+    background-color: var(--col-l2);
+    margin: 1vh;
+    position: relative;
+    top: 1vh;
+    width: 67vw;
+    height: 36vh;
+    color: white;
+    border-radius: 20px;
+    overflow: scroll;
+    font-family: sans-serif;
+}
+
+.player-header{
+    width: 67vw;
+    height: 25%;
+}

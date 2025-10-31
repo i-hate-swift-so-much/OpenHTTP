@@ -1,0 +1,535 @@
+Received a request on 2025/10/31 at 15:47:51 which read the following: 
+HEAD /Songs/KanyeWest/GoodAssJob/nopartiesinla.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:47:51 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/nopartiesinla.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Prefer: safe
+Range: bytes=0-
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: audio
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Accept-Encoding: identity
+Priority: u=4
+
+
+Received a request on 2025/10/31 at 15:47:51 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/nopartiesinla.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd, identity
+Prefer: safe
+Range: bytes=0-1023
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:47:51 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/nopartiesinla.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:48:20 which read the following: 
+HEAD /Songs/KanyeWest/GoodAssJob/heartbreaker.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Priority: u=0
+
+
+Received a request on 2025/10/31 at 15:48:20 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/heartbreaker.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Prefer: safe
+Range: bytes=0-
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: audio
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Accept-Encoding: identity
+Priority: u=4
+
+
+Received a request on 2025/10/31 at 15:48:20 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/heartbreaker.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd, identity
+Prefer: safe
+Range: bytes=0-1023
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:48:20 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/heartbreaker.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:48:23 which read the following: 
+HEAD /Songs/KanyeWest/GoodAssJob/dontstop.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Priority: u=0
+
+
+Received a request on 2025/10/31 at 15:48:23 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/dontstop.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Prefer: safe
+Range: bytes=0-
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: audio
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Accept-Encoding: identity
+Priority: u=4
+
+
+Received a request on 2025/10/31 at 15:48:23 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/dontstop.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd, identity
+Prefer: safe
+Range: bytes=0-1023
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:48:23 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/dontstop.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:48:25 which read the following: 
+HEAD /Songs/KanyeWest/GoodAssJob/shootup.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Priority: u=0
+
+
+Received a request on 2025/10/31 at 15:48:25 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/shootup.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Prefer: safe
+Range: bytes=0-
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: audio
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Accept-Encoding: identity
+Priority: u=4
+
+
+Received a request on 2025/10/31 at 15:48:25 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/shootup.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd, identity
+Prefer: safe
+Range: bytes=0-1023
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:48:25 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/shootup.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:48:27 which read the following: 
+HEAD /Songs/KanyeWest/GoodAssJob/icecube.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Priority: u=0
+
+
+Received a request on 2025/10/31 at 15:48:27 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/icecube.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Prefer: safe
+Range: bytes=0-
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: audio
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Accept-Encoding: identity
+Priority: u=4
+
+
+Received a request on 2025/10/31 at 15:48:27 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/icecube.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd, identity
+Prefer: safe
+Range: bytes=0-1023
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:48:27 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/icecube.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:48:28 which read the following: 
+HEAD /Songs/KanyeWest/GoodAssJob/thatsmybitch.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Priority: u=0
+
+
+Received a request on 2025/10/31 at 15:48:28 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/thatsmybitch.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Prefer: safe
+Range: bytes=0-
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: audio
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Accept-Encoding: identity
+Priority: u=4
+
+
+Received a request on 2025/10/31 at 15:48:28 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/thatsmybitch.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd, identity
+Prefer: safe
+Range: bytes=0-1023
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:48:28 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/thatsmybitch.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:48:30 which read the following: 
+HEAD /Songs/KanyeWest/GoodAssJob/livefastdieyoung.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Priority: u=0
+
+
+Received a request on 2025/10/31 at 15:48:30 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/livefastdieyoung.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Prefer: safe
+Range: bytes=0-
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: audio
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Accept-Encoding: identity
+Priority: u=4
+
+
+Received a request on 2025/10/31 at 15:48:30 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/livefastdieyoung.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd, identity
+Prefer: safe
+Range: bytes=0-1023
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:48:30 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/livefastdieyoung.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:48:33 which read the following: 
+HEAD /Songs/KanyeWest/GoodAssJob/mamasboyfriend.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Priority: u=0
+
+
+Received a request on 2025/10/31 at 15:48:33 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/mamasboyfriend.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Prefer: safe
+Range: bytes=0-
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: audio
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Accept-Encoding: identity
+Priority: u=4
+
+
+Received a request on 2025/10/31 at 15:48:33 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/mamasboyfriend.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd, identity
+Prefer: safe
+Range: bytes=0-1023
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+
+Received a request on 2025/10/31 at 15:48:33 which read the following: 
+GET /Songs/KanyeWest/GoodAssJob/mamasboyfriend.mp3 HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Prefer: safe
+If-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT
+Connection: keep-alive
+Referer: http://127.0.0.1/album.html?id=0
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+

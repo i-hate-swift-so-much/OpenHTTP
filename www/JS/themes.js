@@ -1,0 +1,4 @@
+var themes = {
+    "kanye":{},
+    "dexter":{},
+};

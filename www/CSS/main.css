@@ -1,0 +1,226 @@
+:root {
+    --col-l3:rgba(221, 179, 255, 0.3);
+    --col-l2:rgba(0,0,0,0.3);
+    --col-l1: rgb(10, 10, 10);
+}
+
+body{
+    height: 100%;
+    background: linear-gradient(
+        rgb(174, 85, 199),
+        rgb(174, 85, 199),
+        rgb(255, 100, 61),
+        rgb(255, 171, 76)
+    );
+    background-image: url('../Images/background.webp');
+    background-size: cover;
+    overflow: hidden;
+}
+
+.search-bar-header{
+    background-color: var(--col-l2);
+    /*width: 30vw;*/
+    width: 35.5vw;
+    height: clamp(fit-content, 5vh, fit-content);
+    border-radius: 20px;
+    margin: 1vh;
+    flex: 0 0 auto;
+}
+
+.search-bar{
+    background-color: var(--col-l3);
+    border-radius: 10px;
+    margin: 1vh;
+    width: 80%;
+    border: none;
+    padding: 6px;
+    color: white;
+    font-family: sans-serif;
+}
+
+.search-bar::placeholder{
+    color: white;
+    opacity: 1;
+}
+
+.search-bar-header>button{
+    border-radius: 20px;
+    color: white;
+    background-color: var(--col-l3);
+    border: none;
+    margin: 1vh;
+    padding: 6px;
+    font-family: sans-serif;
+}
+
+.song-info-box{
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 25vw;
+    background-color: var(--col-l2);
+    height: 98vh;
+    border-radius: 20px;
+    margin: 1vh;
+}
+
+.song-info-box>img{
+    margin: 3vw;
+    height: 19vw;
+    border-radius: 20px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    box-shadow: 0.5vw 0.5vw 0px black;
+    margin-bottom: 10vh;
+}
+
+.song-info-box>.title{ 
+    position: relative;
+    color: white;
+    font-family: sans-serif;
+    width: 100%;
+    top: -5vw;
+    /* font-size: 3vw; */
+    display: inline-block;
+    font-size: clamp(1vw, 2vw, 3vw);
+    text-align: center;
+}
+
+.song-info-box>.artist{
+    position: relative;
+    color: gray;
+    font-family: sans-serif;
+    width: 100%;
+    top: -8vw;
+    display: inline-block;
+    font-size: clamp(1vw, 2vw, 3vw);
+    text-align: center;
+}
+
+.song-info-box>.album{
+    position: relative;
+    color: gray;
+    font-family: sans-serif;
+    width: 100%;
+    top: -10vw;
+    display: inline-block;
+    font-size: clamp(0.5vw, 1vw, 2vw);
+    text-align: center;
+}
+
+#album-image-canvas{
+    display: none;
+}
+
+.search-results-header{
+    background-color: var(--col-l2);
+    margin: 1vh;
+    position: relative;
+    top: 1vh;
+    width: 72vw;
+    height: 67.7vh;
+    color: white;
+    border-radius: 20px;
+    overflow: scroll;
+}
+
+.search-result{
+    background-color: var(--col-l3);
+    border-radius: 20px;
+    padding: 1vh;
+    font-family: sans-serif;
+    text-align: left;
+    margin: 1vh;
+    height: fit-content;
+    transition: margin 0.5s;
+}
+
+.result-album{
+    color: gray;
+    font-size: 10pt;
+}
+
+.result-artist{
+    font-size: 7pt;
+}
+
+.result-img{
+    position: relative;
+    display: inline-block;
+    border-radius: 20%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 10vw;
+}
+.result-click{
+    padding: none;
+    background-color: transparent;
+    border: none;
+    margin: none;
+}
+.result-click:hover{
+    cursor: pointer;
+}
+
+.player-header{
+    background-color: var(--col-l2);
+    width: 10px;
+    margin: 1vh;
+    border-radius: 20px;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container{
+    display: flex;
+    align-items: stretch;
+    width: 73.3vw;
+}
+
+.search-results-header>p{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.search-result:hover{
+    margin: 0.5vh;
+}
+
+.player-header>button{
+    background-color: transparent;
+    width: 6vw;
+    height: 6vw;
+
+    position: relative;
+
+    margin-top: 1vw;
+
+    opacity: 0.8;
+
+    border: none;
+    
+    transition: width 0.5s, height 0.5s, margin-top 0.5s, opacity 0.5s;
+}
+
+.player-header>button>img{
+    width: 100%;
+}
+
+.player-header>button:hover{
+    width: 6.5vw;
+    height: 6.5vw;
+    margin-top: 0.75vw;
+    opacity: 1;
+}
+
+.player-header>p{
+    color: white;
+    font-family: sans-serif;
+    font-size: 15pt;
+}
