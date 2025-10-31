@@ -10,7 +10,7 @@ Currently, OpenHTTP can receive `GET` and `HEAD` requests and respond to them, a
 Unfortunately, OpenHTTP is still in the early stages of devlopment, so many features included by other web servers (such as Apache) are not compatible with OpenHTTP (unsupported requests are met with a 500 for now). The <ins>only</ins> requests that OpenHTTP can interpret and respond to are `GET` and `HEAD` requests, meaning that `POST` requests are unsupported. It also very rarely hangs for no reason.
 
 ## Speed
-OpenHTTP has been benchmarked with the "Siege" HTTP load tester (`brew install siege`). Below are the results when tested with 10 concurrent clients and every directory listed in the example `www` file path and using the -i command line argument.
+OpenHTTP has been benchmarked with the "Siege" HTTP load tester (`brew install siege`). Below are the results when tested with 10 concurrent clients and every directory from [this example project](https://github.com/i-hate-swift-so-much/yeezify.git)file path and using the -i command line argument.
 ```
 Transactions: 6862 hits
 Availability: 100.00 %
