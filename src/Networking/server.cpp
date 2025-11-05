@@ -83,7 +83,10 @@ void WebServer::startServer(){
             LogErrorS("Maximum amount of server restarts (" + std::to_string(ResetLimit) + ") has been reached, please check your .camfig file and check that the configuration is correct.");
             return;
         }
-        std::cerr << RED_COL << "Server crashed during initialization! Port " << p << " might be busy, Resulting to fallback port of " << fallback << " and now using all available network interfaces" << RESET_COL << std::endl;
+        std::cout << RED_COL << std::flush;
+        perror("Server crashed during initialization. ");
+        std::cout << RESET_COL << std::flush;
+        std::cout << RED_COL << "Resulting to fallback port of " << fallback << " and now using all available network interfaces" << RESET_COL << std::endl;
         std::cout << "Attempt " << ResetCount+2 << "..." << std::endl;
         p = fallback;
         ResetCount++;

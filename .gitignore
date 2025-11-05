@@ -1,6 +1,8 @@
 .DS_Store
 .vscode/
 Logs/*
+www/*
+run.sh
 pushtogit.sh
 bin/arm64/*
 bin/x86_64/*

@@ -80,9 +80,12 @@ CamfigList ParseCamfig(std::string data){
             curListKey.Key = curTemp;
             curTemp = "";
         }else if (curChar == '\n'){
+            if(curTemp == ""){
+                int nextNewLine = IndexOfNextLine(i, data);
+                i = nextNewLine;
+                break;
+            }
             curListKey.Value = curTemp;
-            camfig_mutex.lock();
-            camfig_mutex.unlock();
             std::string type = GetTypeOfValue(curListKey.Value);
             CamfigListKey toAdd;
             toAdd.type = type;
@@ -107,6 +110,11 @@ CamfigList ParseCamfig(std::string data){
             toRet.Keys.push_back(toAdd);
             curTemp = "";
         }else if (curChar == ' '){
+            if(curTemp == ""){
+                int nextNewLine = IndexOfNextLine(i, data);
+                i = nextNewLine;
+                break;
+            }
             curListKey.Value = curTemp;
             camfig_mutex.lock();
             camfig_mutex.unlock();
