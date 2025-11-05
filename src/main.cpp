@@ -38,8 +38,6 @@ int ParserDebugMain(){
 int CamfigDebug(){
     CamfigList testCamfig = GetCamfig();
     DumpCamfigList(testCamfig);
-    CamfigListKey* CamfigAny_Address = FindCamfigListKeyByBoolKey(testCamfig, "Any_Address");
-    std::cout << CamfigAny_Address->BoolKey.Value << std::endl;
     return 0;
 }
 

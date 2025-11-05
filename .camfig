@@ -1,6 +1,7 @@
 # CAMFIG FILES ARE CASE SENSITIVE!!!
 
-# The address that the server will serve from, accepts "localhost" for loopback, accepts "Any" for all network interfaces (which are localhost, your IP, etc.), and any string which is a valid ip, e.g. "192.168.1.1".
+# The address that the server will serve from, accepts "localhost" for loopback, accepts "Any" for all network 
+# interfaces (which are localhost, your IP, etc.), and any string which is a valid ip, e.g. "192.168.1.1".
 Address:localhost
 # The port that the server will bind to.
 Port:80
