@@ -1,3 +1,4 @@
+clear
 echo "Compiling the program..."
-g++ src/main.cpp -o bin/OpenHTTP -Iinclude -Wall -Wunused-variable
-./bin/OpenHTTP
+make arm64
+./bin/arm64/OpenHTTP

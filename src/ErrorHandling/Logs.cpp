@@ -1,19 +1,8 @@
-#pragma once
+#include "ErrorHandling/Logs.h"
 
-#include <stdio.h>
-#include <stdint.h>
-#include <string>
-
-#include <mutex>
-#include <thread>
-#include <iostream>
-#include <fstream>
-#include <exception>
-#include <ctime>
+std::mutex logs_mutex;
 
 //Used for writing to the logs directory
-
-std::mutex ofstream_mutex;
 
 std::string HTTPheaderFromResponse(std::string response){
     std::string toret = "";
@@ -47,13 +36,13 @@ void LogErrorE(std::exception& message){
     header += std::to_string(UTCdate->tm_hour) + ":"; // Hour
     header += std::to_string(UTCdate->tm_min) + ":"; // Minutes
     header += std::to_string(UTCdate->tm_sec); // Seconds
-    ofstream_mutex.lock();  
+    logs_mutex.lock();  
     std::ofstream crashLog(fileName, std::ios::out);
     if (crashLog.is_open()) {
         crashLog << FDate << std::endl << message.what() << std::endl;
         crashLog.close();
     }
-    ofstream_mutex.unlock();  
+    logs_mutex.unlock();  
 }
 
 void LogErrorS(std::string message){    
@@ -76,13 +65,13 @@ void LogErrorS(std::string message){
     header += std::to_string(UTCdate->tm_hour) + ":"; // Hour
     header += std::to_string(UTCdate->tm_min) + ":"; // Minutes
     header += std::to_string(UTCdate->tm_sec); // Seconds
-    ofstream_mutex.lock();
+    logs_mutex.lock();
     std::ofstream crashLog(fileName, std::ios::out);
     if (crashLog.is_open()) {
         crashLog << header << std::endl << message;
         crashLog.close();
     }
-    ofstream_mutex.unlock();  
+    logs_mutex.unlock();  
 }
 
 void LogRequest(std::string incomingRequest){
@@ -101,13 +90,13 @@ void LogRequest(std::string incomingRequest){
     header += std::to_string(UTCdate->tm_hour) + ":"; // Hour
     header += std::to_string(UTCdate->tm_min) + ":"; // Minutes
     header += std::to_string(UTCdate->tm_sec) + " which read the following: "; // Seconds
-    ofstream_mutex.lock();  
+    logs_mutex.lock();  
     std::ofstream crashLog(fileName, std::ios::app);
     if (crashLog.is_open()) {
         crashLog << header << std::endl << incomingRequest << std::endl;
         crashLog.close();
     }
-    ofstream_mutex.unlock();  
+    logs_mutex.unlock();  
 }
 
 void LogResponse(std::string outgoingResponse, std::string path, bool addBody = true){
@@ -127,7 +116,7 @@ void LogResponse(std::string outgoingResponse, std::string path, bool addBody = 
     header += std::to_string(UTCdate->tm_min) + ":"; // Minutes
     header += std::to_string(UTCdate->tm_sec) + " for the path: "; // Seconds
     header += path + " which read as the following: ";
-    ofstream_mutex.lock();  
+    logs_mutex.lock();  
     std::ofstream crashLog(fileName, std::ios::app);
     if (crashLog.is_open()) {
         crashLog << header << std::endl;
@@ -138,5 +127,5 @@ void LogResponse(std::string outgoingResponse, std::string path, bool addBody = 
         }
         crashLog.close();
     }
-    ofstream_mutex.unlock();  
+    logs_mutex.unlock();  
 }

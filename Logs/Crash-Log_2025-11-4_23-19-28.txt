@@ -1,0 +1,2 @@
+2025/11/4 23:19:28
+Maximum amount of server restarts (5) has been reached, please check your .camfig file and check that the configuration is correct.

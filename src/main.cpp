@@ -5,8 +5,9 @@
 #include "Networking/RequestParser.h"
 #include "ErrorHandling/Logs.h"
 #include <signal.h>
+#include "Camfig/Camfig.h"
 
-int serverMain(){
+int ServerMain(){
     WebServer server(80);
     try{
         server.startServer();
@@ -20,7 +21,7 @@ int serverMain(){
     return 0;
 }
 
-int debugMain(){
+int ParserDebugMain(){
     char bufferImage[4096] = "GET /Images/Buttons/Last_Song.png HTTP/1.1\r\nHost: 127.0.0.1\r\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0\r\nAccept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5\r\nAccept-Language: en-US,en;q=0.5\r\nAccept-Encoding: gzip, deflate, br, zstd\r\nPrefer: safe\r\nConnection: keep-alive\r\nReferer: http://127.0.0.1/\r\nSec-Fetch-Dest: image\r\nSec-Fetch-Mode: no-cors\r\nSec-Fetch-Site: same-origin\r\nPriority: u=5\r\n\r\n";
     char bufferSongRange[4096] = "GET /Songs/KanyeWest/GoodAssJob/mamasboyfriend.mp3 HTTP/1.1\r\nHost: 127.0.0.1\r\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0\r\nAccept: */*\r\nAccept-Language: en-US,en;q=0.5\r\nAccept-Encoding: gzip, deflate, br, zstd, identity\r\nPrefer: safe\r\nRange: bytes=1963-2091\r\nIf-Modified-Since: Sat, 01 Jan 1970 00:00:00 GMT\r\nConnection: keep-alive\r\nReferer: http://127.0.0.1/\r\nSec-Fetch-Dest: empty\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Site: same-origin\r\n\r\n";
     char bufferCSS[4096] = "GET /CSS/main.css HTTP/1.1\r\nHost: 127.0.0.1\r\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:143.0) Gecko/20100101 Firefox/143.0\r\nAccept: text/css,*/*;q=0.1\r\nAccept-Language: en-US,en;q=0.5\r\nAccept-Encoding: gzip, deflate, br, zstd\r\nPrefer: safe\r\nConnection: keep-alive\r\nReferer: http://127.0.0.1/\r\nSec-Fetch-Dest: style\r\nSec-Fetch-Mode: no-cors\r\nSec-Fetch-Site: same-origin\r\nPriority: u=2\r\n";
@@ -34,8 +35,16 @@ int debugMain(){
     return 0;
 }
 
+int CamfigDebug(){
+    CamfigList testCamfig = GetCamfig();
+    DumpCamfigList(testCamfig);
+    CamfigListKey* CamfigAny_Address = FindCamfigListKeyByBoolKey(testCamfig, "Any_Address");
+    std::cout << CamfigAny_Address->BoolKey.Value << std::endl;
+    return 0;
+}
+
 int main(){
     signal(SIGPIPE, SIG_IGN);
-    serverMain();
+    ServerMain();
     return 0;
 }

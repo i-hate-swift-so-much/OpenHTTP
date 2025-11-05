@@ -1,10 +1,4 @@
-#pragma once
-
-#include <iostream>
-#include <string.h>
-#include "stdio.h"
-#include <iostream>
-#include <map>
+#include "Networking/MIME.h"
 
 std::map<std::string, std::string> ExtensionToMIME = {
     {"aac", "audio/aac"},
@@ -86,9 +80,6 @@ std::map<std::string, std::string> ExtensionToMIME = {
     {"7z", "application/x-7z-compressed"},
     {"error","message/error"}
 };
-
-
-//Made for 'server.h', converts file type to MIME type, also extracts file type from a file.
 
 std::string fileType(std::string path){
     //Get index of the final period in the path (incase theres more than one).

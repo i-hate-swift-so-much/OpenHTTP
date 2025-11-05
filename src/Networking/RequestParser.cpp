@@ -1,20 +1,6 @@
-#pragma once
+#include "Networking/RequestParser.h"
 
-#include <stdio.h>
-#include <stdint.h>
-#include <string>
-#include <map>
-#include <fstream>
-#include <mutex>
-#include <thread>
-#include <iostream>
-#include <exception>
-#include <vector>
-#include "MIME.h"
-#include "RequestParser.h"
-
-std::mutex cout_mutex;
-std::mutex cerr_mutex;
+std::mutex parser_mutex;
 
 std::string ExtractPATH(int index, char buffer[4096]){
     std::string cur = "";
@@ -70,9 +56,9 @@ std::vector<unsigned char> FetchResourceRanged(std::string path, std::streamoff 
 
 
     if (!file.is_open()) {
-        cout_mutex.lock();
+        parser_mutex.lock();
         std::cout << "Failed to open file: " << path << std::endl;
-        cout_mutex.unlock();
+        parser_mutex.unlock();
         if(MIMEmatchPATH(path) == "text/html"){
             std::vector<unsigned char> charlist;
             std::string message = "<center><h1>404</h1><h3>The requested file was not found on this server.</h3><a href='/'>Return to the main page</a></center>";
@@ -91,9 +77,9 @@ std::vector<unsigned char> FetchResourceRanged(std::string path, std::streamoff 
     }
 
     if (!file) {
-        cerr_mutex.lock();
+        parser_mutex.lock();
         std::cerr << "Failed to open file: " << path << std::endl;
-        cerr_mutex.unlock();
+        parser_mutex.unlock();
         return data;
     }
 
@@ -102,9 +88,9 @@ std::vector<unsigned char> FetchResourceRanged(std::string path, std::streamoff 
     std::streampos fileSize = file.tellg();
 
     if (begin >= fileSize) {
-        cerr_mutex.lock();
+        parser_mutex.lock();
         std::cerr << "Begin position exceeds file size (" << fileSize << ")" << std::endl;
-        cerr_mutex.unlock();
+        parser_mutex.unlock();
         return data;
     }
 
@@ -122,15 +108,15 @@ std::vector<unsigned char> FetchResourceRanged(std::string path, std::streamoff 
     file.read(reinterpret_cast<char*>(data.data()), size);
 
     if (!file) {
-        cerr_mutex.lock();
+        parser_mutex.lock();
         std::cerr << "Error reading file (read " << file.gcount() << " bytes instead of " << size << ")" << std::endl;
-        cerr_mutex.unlock();
+        parser_mutex.unlock();
         data.resize(file.gcount());
     }
 
-    cout_mutex.lock();
+    parser_mutex.lock();
     std::cout << "Read " << size << " bytes from " << path << std::endl;
-    cout_mutex.unlock();
+    parser_mutex.unlock();
     return data;
 }   
 
@@ -233,11 +219,10 @@ std::map<std::string, std::string> MakeRequestMap(char buffer[4096]){
 std::string FetchResource(const std::string& path) {
     std::ifstream fetched(path, std::ios::binary);
 
-
     if (!fetched.is_open()) {
-        cout_mutex.lock();
+        parser_mutex.lock();
         std::cout << "Failed to open file: " << path << std::endl;
-        cout_mutex.unlock();
+        parser_mutex.unlock();
         if(MIMEmatchPATH(path) == "text/html"){
             return "<center><h1>404</h1><h3>The requested file was not found on this server.</h3><a href='/'>Return to the main page</a></center>";
         }else{
@@ -254,9 +239,9 @@ std::string FetchResource(const std::string& path) {
     std::string fileData(size, '\0');
 
     if (!fetched.read(&fileData[0], size)) {
-        cerr_mutex.lock();
+        parser_mutex.lock();
         std::cerr << "Error reading file: " << path << std::endl;
-        cerr_mutex.unlock();
+        parser_mutex.unlock();
         return "";
     }
 
@@ -470,8 +455,8 @@ int ExtractResponseCodeFromResponse(std::string response){
 void DumpMap(std::map<std::string, std::string> map){
     
     for(std::map<std::string,std::string>::iterator it = map.begin(); it != map.end(); it++) {
-        cout_mutex.lock();
+        parser_mutex.lock();
         std::cout << it->first << ": " << it->second << std::endl;
-        cout_mutex.unlock();
+        parser_mutex.unlock();
     }
 }

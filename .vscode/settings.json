@@ -53,6 +53,8 @@
         "fstream": "cpp",
         "iomanip": "cpp",
         "map": "cpp",
-        "__tree": "cpp"
+        "__tree": "cpp",
+        "iterator": "cpp",
+        "exception": "cpp"
     }
 }
