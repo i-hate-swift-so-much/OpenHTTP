@@ -2,3 +2,6 @@
 .vscode/
 Logs/*
 pushtogit.sh
+bin/arm64/*
+bin/x86_64/*
+obj/*
