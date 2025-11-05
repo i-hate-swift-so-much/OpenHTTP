@@ -1,4 +1,0 @@
-var themes = {
-    "kanye":{},
-    "dexter":{},
-};
