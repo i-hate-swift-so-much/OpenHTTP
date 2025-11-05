@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OpenHTTP Manual</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1 id="openhttp">OpenHTTP</h1>
+<p>OpenHTTP is an open source HTTP web server made by Cameron McLaughlin between September 10th 2025 and October 30th 2025</p>
+<p><a href="#how-to-actually-use-it">Click this to skip all the technical mumbo jumbo</a>.</p>
+<h2 id="1-0-features">1.0 Features</h2>
+<p>Currently, OpenHTTP can receive <code>GET</code> and <code>HEAD</code> requests and respond to them, along with being able to turn a file path into a MIME type (e.g &quot;www/index.html&quot; -&gt; &quot;text/html&quot;). The MIME conversion uses <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types">the official Mozilla &quot;Common Media Types&quot; page</a>. OpenHTTP also has proper 404 and 206 handling for the <code>Range: butes=min-max</code> request header.</p>
+<h2 id="1-1-limitations">1.1 Limitations</h2>
+<p>Unfortunately, OpenHTTP is still in the early stages of devlopment, so many features included by other web servers (such as Apache) are not compatible with OpenHTTP (unsupported requests are met with a 500 for now). The <ins>only</ins> requests that OpenHTTP can interpret and respond to are <code>GET</code> and <code>HEAD</code> requests, meaning that <code>POST</code> requests are unsupported. It also very rarely hangs for no reason.</p>
+<h2 id="1-2-speed">1.2 Speed</h2>
+<p>OpenHTTP has been benchmarked with the &quot;Siege&quot; HTTP load tester (<code>brew install siege</code>). Below are the results when tested with 10 concurrent clients and every directory from <a href="https://github.com/i-hate-swift-so-much/yeezify.git">this example project</a> file path and using the -i command line argument.</p>
+<pre><code><span class="hljs-string">Transactions:</span> <span class="hljs-number">6862</span> hits
+<span class="hljs-string">Availability:</span> <span class="hljs-number">100.00</span> %
+Elapsed <span class="hljs-string">time:</span> <span class="hljs-number">60.61</span> secs
+Data <span class="hljs-string">transferred:</span> <span class="hljs-number">40733.49</span> MB
+Response <span class="hljs-string">time:</span> <span class="hljs-number">88.14</span> ms
+Transaction <span class="hljs-string">rate:</span> <span class="hljs-number">113.22</span> trans/sec
+<span class="hljs-string">Throughput:</span> <span class="hljs-number">672.06</span> MB/sec
+<span class="hljs-string">Concurrency:</span> <span class="hljs-number">9.98</span>
+Successful <span class="hljs-string">transactions:</span> <span class="hljs-number">6862</span>
+Failed <span class="hljs-string">transactions:</span> <span class="hljs-number">0</span>
+Longest <span class="hljs-string">transaction:</span> <span class="hljs-number">370.00</span> ms
+Shortest <span class="hljs-string">transaction:</span> <span class="hljs-number">0.00</span> ms
+</code></pre><p>The results will vary depending on the server hardware, as this was executed on my local host.</p>
+<h2 id="1-3-future-plans">1.3 Future plans</h2>
+<p>For the future, I plan to (!!!MAYBE!!!) add HTTPS. Other plans include properly handling every HTTP response code as seen on <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status">the Mozilla HTTP response status codes page</a>, compression.</p>
+<h2 id="1-4-under-the-hood">1.4 Under the hood</h2>
+<p>OpenHTTP is multithreaded, meaning that everytime a request is sent to the server and succesfully connects, a new thread is started on
+the CPU to handle the request. Once the server begins to handle a request, it parses the request into an 
+<code>std::map&lt;std::string, std::string&gt;</code> (for javascript skids, this is equivalent to an object) to seperate the header into key value pairs
+for future use (e.g. <code>&quot;Range: bytes=0-100&quot;</code> turns into <code>std::pair&lt;std::string, std::string&gt; whatever = {&quot;Range&quot;:&quot;bytes=0-100&quot;};</code>.
+Again, for the javascript skids this is equivalent to <code>var whatever = {&quot;Range&quot;:&quot;bytes=0-100&quot;};</code>), after this is processes the map by
+fetching the file (either using <code>std::string FetchResource(std::string path)</code> or <code>std::vector&lt;unsigned char&gt;
+FetchResourceRanged(std::string path, std::streamoff begin, std::streamoff end)</code> depending on the existence of <code>Range</code> in the request header, then its finally ready to send!</p>
+<h2 id="1-5-how-to-actually-use-it">1.5 How to actually use it</h2>
+<p>Just put the HTML/JS/CSS files into <code>www/</code>, check that its runnning on the right port and IP, then run <code>./main/sh</code> to recompile and run the program.</p>
+<hr>
+<h1 id="2-0-camfig">2.0 Camfig</h1>
+<p>In the OpenHTTP directory, there is a file named <code>.camfig</code>, this file is used as a configuration file similar to how Apache uses the <code>.conf</code> extension. The reason I made my own file is because I&#39;m lazy and didn&#39;t want to learn the syntax of another config file format, and I wanted the syntax to be simple.</p>
+<h2 id="2-1-camfig-syntax">2.1 Camfig syntax</h2>
+<p>To start, camfig is <strong>CASE SENSITIVE</strong>, meaning that each property must match its example if any examples exist.</p>
+<h3 id="2-1-0-basic-syntax">2.1.0 Basic syntax</h3>
+<p>Camfig uses a very basic syntax in which there is a key and value (always seperated by a colon) for each property. For example, the property <code>Address:Any</code> has a key of <code>Address</code> and a value of <code>Any</code> (this specific property tells the server to use all network interfaces for serving).</p>
+<h3 id="2-1-1-comments">2.1.1 Comments</h3>
+<p>Comments in camfig are basically just shell script comments in the sense that they use the &quot;#&quot; character to begin a comment and continue until the next line, the only difference is that they can only be single lines (no comment blocks).</p>
+<hr>
+<p>Please report any errors you find in the <code>issues</code> forum on this github repo, including the request that was sent to the server before the crash (seen in Request_Log) and any error messages generated in the terminal. If you dont have these, just describe what you were doing in detail.</p>
+	</body>
+</html>
