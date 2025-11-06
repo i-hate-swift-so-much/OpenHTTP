@@ -56,7 +56,12 @@ void WebServer::startServer(){
     }
 
     address.sin_family = AF_INET;
-    address.sin_port = htons(p);
+    if(OverrideAddress){
+        address.sin_port = htons(226);
+    }else{
+        address.sin_port = htons(p);
+    }
+    
 
     if(bind(server_fd, (struct sockaddr*)&address, sizeof(address)) != -1){
         std::cout << "Socket established" << std::endl;

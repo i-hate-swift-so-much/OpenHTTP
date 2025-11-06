@@ -135,7 +135,36 @@ CamfigList ParseCamfig(std::string data){
             curTemp = "";
         }else if (curChar == '#'){
             int nextNewLine = IndexOfNextLine(i, data);
+            if(nextNewLine == i){
+                break;
+            }
             i = nextNewLine;
+        }
+        if(i == data.size()-1){
+            curListKey.Value = curTemp;
+            std::string type = GetTypeOfValue(curListKey.Value);
+            CamfigListKey toAdd;
+            toAdd.type = type;
+            if(type == "String"){
+                CamfigKeyString StringKey;
+                StringKey.Key = curListKey.Key;
+                StringKey.Value = curListKey.Value;
+                toAdd.StringKey = StringKey;
+            }else if(type == "Integer"){
+                CamfigKeyInt IntKey;
+                IntKey.Key = curListKey.Key;
+                IntKey.Value = std::stoi(curListKey.Value);
+                toAdd.IntKey = IntKey;
+            }else if(type == "Bool"){
+                CamfigKeyBool BoolKey;
+                BoolKey.Key = curListKey.Key;
+                BoolKey.Value = curListKey.Value == "true";
+                toAdd.BoolKey = BoolKey;
+            }else{
+                std::cout << "Unrecognized Camfig type: " << curListKey.Key << "|" << curListKey.Value << "|" << type << std::endl;
+            }
+            toRet.Keys.push_back(toAdd);
+            curTemp = "";
         }
     }
     return toRet;
