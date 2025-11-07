@@ -57,10 +57,10 @@ void WebServer::startServer(){
 
     address.sin_family = AF_INET;
     if(OverrideAddress){
-        address.sin_port = htons(226);
-    }else{
-        address.sin_port = htons(p);
+        p = 226;
     }
+
+    address.sin_port = htons(p);
     
 
     if(bind(server_fd, (struct sockaddr*)&address, sizeof(address)) != -1){
@@ -85,7 +85,7 @@ void WebServer::startServer(){
     }else{
         if(ResetCount >= ResetLimit-1){
             std::cout << "The server has reset the maximum amount of " << ResetLimit << " times please check your .camfig file and check that the configuration is correct." << std::endl;
-            LogErrorS("Maximum amount of server restarts (" + std::to_string(ResetLimit) + ") has been reached, please check your .camfig file and check that the configuration is correct.");
+            LogErrorS("Maximum amount of server restarts (" + std::to_string(ResetLimit) + ") has been reached, please check your .camfig file and check that the configuration is correct." + "\n" + "Errno String: " + std::strerror(errno));
             return;
         }
         std::cout << RED_COL << std::flush;

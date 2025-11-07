@@ -43,6 +43,9 @@ int CamfigDebug(){
 
 int main(){
     signal(SIGPIPE, SIG_IGN);
+    #if defined(MAC_VERSION)
+        std::cout << "arm" << std::endl;
+    #endif
     ServerMain();
     return 0;
 }

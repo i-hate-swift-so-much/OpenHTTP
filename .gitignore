@@ -5,5 +5,6 @@ www/*
 run.sh
 pushtogit.sh
 bin/arm64/*
+run.sh
 bin/x86_64/*
 obj/*

@@ -28,7 +28,14 @@ Shortest transaction: 0.00 ms
 The results will vary depending on the server hardware, as this was executed on my local host.
 
 ## 1.3 Future plans
-For the future, I plan to (!!!MAYBE!!!) add HTTPS. Other plans include properly handling every HTTP response code as seen on [the Mozilla HTTP response status codes page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status), compression.
+### 1.3.0 Confirmed Plans
+For the future, plans which I will be doing are as follows:
+* POST Request Support
+
+### 1.3.1 Possible Plans
+For the future, plans which I am considering doing are as follows:
+* HTTPS support
+* Windows support
 
 ## 1.4 Under the hood
 OpenHTTP is multithreaded, meaning that everytime a request is sent to the server and succesfully connects, a new thread is started on
@@ -55,6 +62,27 @@ Camfig uses a very basic syntax in which there is a key and value (always sepera
 
 ### 2.1.1 Comments
 Comments in camfig are basically just shell script comments in the sense that they use the "#" character to begin a comment and continue until the next line, the only difference is that they can only be single lines (no comment blocks).
+
+---
+
+# 3.0 GUI
+Written in Python, the GUI is a very minimal alternative to running the program directly.
+
+## 3.1 GUI Layout
+![Layout of the OpenHTTP GUI](docs/Layout.png "Layout of the OpenHTTP GUI")
+The layout of the OpenHTTP GUI is simple. The three text boxes which span from the top left to bottom left corner of the window dispay three properties defined in your camfig, the Port property, the Fallback_Port property, and the Address property in that order. In the top right, there is a text box with a scroll bar that shows the std::out of the server. In the bottom right, there is a button that when pressed, will either start or stop the server.
+
+## 3.2 Using the GUI
+After you compile the program, you will be able to use the GUI through two shell scripts depending on which architecture you compiled for. If you compiled the server as an arm64 program (e.g. Newer Macs, Raspberry PIs), you can run the GUI with the command `arm64gui.sh`. Similarly, if you compiled the server as an x86_64 program (e.g. a Linux Server using an Intel/AMD CPU), you can run the GUI with the command `x86_64gui.sh`.
+
+## 3.3 How it works
+The OpenHTTP GUI uses python with the built in tkinter library for easy cross compatibility with the trade off being slower performance. The GUI is also very lightweight (for a python program, at least). Along with the GUI, I have implemented a Camfig parsed (`UI/Camfig.py`) for anyone who wants to tinker with it, but also so I could get the Port, Address, and Fallback_Port values.
+
+---
+
+# 4.0 Known Errors
+## 4.1 GUI.
+* The GUI sometimes fails to cancel the OpenHTTP process when the window is closed, if it does this, the fix is to quit the process from your systems task manager.
 
 ---
 

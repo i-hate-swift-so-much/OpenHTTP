@@ -106,8 +106,6 @@ CamfigList ParseCamfig(std::string data){
             curTemp = "";
         }else if (curChar == ' ' && curTemp != ""){
             curListKey.Value = curTemp;
-            camfig_mutex.lock();
-            camfig_mutex.unlock();
             std::string type = GetTypeOfValue(curListKey.Value);
             CamfigListKey toAdd;
             toAdd.type = type;
